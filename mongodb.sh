@@ -1,0 +1,1 @@
+cp mongo.conf /etc/yum.repos.d/mongo.repo
