@@ -15,22 +15,22 @@ rm -rf /app
 mkdir /app
 
 echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
-curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
+curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 cd /app
 
 echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
-unzip /tmp/catalogue.zip
+unzip /tmp/user.zip
 
 echo -e "\e[36m>>>>>>>>> Install NodeJS Dependencies <<<<<<<<\e[0m"
 npm install
 
-echo -e "\e[36m>>>>>>>>> Copy Catalogue SystemD file <<<<<<<<\e[0m"
-cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
+echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
+cp $script_path/user.service /etc/systemd/system/user.service
 
-echo -e "\e[36m>>>>>>>>> Start Catalogue Service <<<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>>> Start User Service <<<<<<<<\e[0m"
 systemctl daemon-reload
-systemctl enable catalogue
-systemctl restart catalogue
+systemctl enable user
+systemctl restart user
 
 echo -e "\e[36m>>>>>>>>> Copy MongoDB repo <<<<<<<<\e[0m"
 cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
@@ -39,4 +39,4 @@ echo -e "\e[36m>>>>>>>>> Install MongoDB Client <<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
 
 echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
-mongo --host mongodb-dev.rdevopsb72.online </app/schema/catalogue.js
+mongo --host mongodb-dev.rdevopsb72.online </app/schema/user.js
