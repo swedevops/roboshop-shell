@@ -1,5 +1,5 @@
 script_path=$(dirname $0)
-source ${script_path}/common.sh
+source /root/roboshop-shell/common.sh
 echo -e "\e[36m>>>>>>>>> Configuring NodeJS repos <<<<<<<<\e[0m"curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
 echo -e "\e[36m>>>>>>>>> Install NodeJS <<<<<<<<\e[0m"
@@ -31,7 +31,7 @@ systemctl enable user
 systemctl restart user
 
 echo -e "\e[36m>>>>>>>>> Copy MongoDB repo <<<<<<<<\e[0m"
-cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /root/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 
 echo -e "\e[36m>>>>>>>>> Install MongoDB Client <<<<<<<<\e[0m"
 yum install mongodb-org-shell -y

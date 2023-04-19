@@ -1,5 +1,5 @@
 script_path=$(dirname $0)
-source ${script_path}/common.sh
+source /root/roboshop-shell/common.sh
 
 echo -e "\e[36m>>>>>>>>> Install Redis Repos <<<<<<<<\e[0m"
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
