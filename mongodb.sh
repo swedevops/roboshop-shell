@@ -1,4 +1,5 @@
-script_path=$(dirname $0)
+
+
 source /root/roboshop-shell/common.sh
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo

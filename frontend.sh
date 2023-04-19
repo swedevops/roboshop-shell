@@ -1,4 +1,4 @@
-script_path=$(dirname $0)
+
 source /root/roboshop-shell/common.sh
 
 yum install nginx -y

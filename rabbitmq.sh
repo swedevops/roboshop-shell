@@ -1,4 +1,4 @@
-script_path=$(dirname $0)
+
 source /root/roboshop-shell/common.sh
 
 echo -e "\e[36m>>>>>>>>> Setup ErLang Repos <<<<<<<<\e[0m"
