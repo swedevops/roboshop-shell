@@ -14,3 +14,4 @@ location /health {
   stub_status on;
   access_log off;
 }
+
