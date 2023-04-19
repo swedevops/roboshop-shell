@@ -1,7 +1,5 @@
-
-
-
 source ${script_path}/common.sh
+
 echo $script_path
 
 echo $app_user
