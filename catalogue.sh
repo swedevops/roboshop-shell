@@ -1,5 +1,3 @@
-
-
 source /root/roboshop-shell/common.sh
 
 echo -e "\e[36m>>>>>>>>> Configuring NodeJS repos <<<<<<<<\e[0m"
