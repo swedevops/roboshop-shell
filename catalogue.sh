@@ -26,6 +26,7 @@ npm install
 
 echo -e "\e[36m>>>>>>>>> Copy Catalogue SystemD file <<<<<<<<\e[0m"
 cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
+#/root/roboshop-shell
 
 echo -e "\e[36m>>>>>>>>> Start Catalogue Service <<<<<<<<\e[0m"
 systemctl daemon-reload
