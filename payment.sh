@@ -1,5 +1,3 @@
-
-
 source /root/roboshop-shell/common.sh
 
 echo -e "\e[36m>>>>>>>>> Install Python <<<<<<<<\e[0m"
