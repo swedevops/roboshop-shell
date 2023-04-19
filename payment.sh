@@ -27,4 +27,4 @@ cp ${script_path}/payment.service /etc/systemd/system/payment.service
 echo -e "\e[36m>>>>>>>>> Start Payment Service <<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable payment
-systemctl restart payment
+

@@ -10,3 +10,4 @@ SyslogIdentifier=shipping
 
 [Install]
 WantedBy=multi-user.target
+
