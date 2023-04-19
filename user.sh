@@ -1,4 +1,3 @@
-
 source /root/roboshop-shell/common.sh
 echo -e "\e[36m>>>>>>>>> Configuring NodeJS repos <<<<<<<<\e[0m"curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
@@ -37,4 +36,4 @@ echo -e "\e[36m>>>>>>>>> Install MongoDB Client <<<<<<<<\e[0m"
 yum install mongodb-org-shell -y
 
 echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
-mongo --host mongodb-dev.rdevopsb72.online </app/schema/user.js
+mongo --host mongodb.swedev99.online </app/schema/user.js
