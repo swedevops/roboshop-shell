@@ -29,7 +29,7 @@ echo -e "\e[36m>>>>>>>>> Copy Catalogue SystemD file <<<<<<<<\e[0m"
 cp /root/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
 #t/roboshop-shell
 
-echo -e "\e[36m>>>>>>>>> Start Catalogue Service <<<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>>> Start Catalogue Services <<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable catalogue
 systemctl restart catalogue
