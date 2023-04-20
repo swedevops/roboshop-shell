@@ -29,7 +29,7 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
 echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
-cp$script_path/user.service /etc/systemd/system/user.service
+cp $script_path/user.service /etc/systemd/system/user.service
 
 echo -e "\e[36m>>>>>>>>> Start User Service <<<<<<<<\e[0m"
 systemctl daemon-reload
