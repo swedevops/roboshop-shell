@@ -20,7 +20,10 @@ unzip /tmp/user.zip
 
 echo -e "\e[36m>>>>>>>>> Install NodeJS Dependencies <<<<<<<<\e[0m"
 npm install
-
+script=$(realpath "$0")
+#echo script
+script_path=$(dirname "$script")
+source ${script_path}/common.sh
 echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
 cp$script_path/user.service /etc/systemd/system/user.service
 

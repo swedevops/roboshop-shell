@@ -13,6 +13,10 @@ mkdir /app
 
 echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip
+script=$(realpath "$0")
+#echo script
+script_path=$(dirname "$script")
+source ${script_path}/common.sh
 
 echo -e "\e[36m>>>>>>>>> Extract App Content <<<<<<<<\e[0m"
 cd /app
