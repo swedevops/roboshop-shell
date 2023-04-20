@@ -1,5 +1,5 @@
 
-source /root/roboshop-shell/common.sh
+source$script_path/common.sh
 
 yum install nginx -y
 cp roboshop.conf /etc/nginx/default.d/roboshop.conf

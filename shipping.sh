@@ -1,5 +1,5 @@
 
-source /root/roboshop-shell/common.sh
+source$script_path/common.sh
 
 echo -e "\e[36m>>>>>>>>> Install Maven <<<<<<<<\e[0m"
 yum install maven -y
@@ -29,7 +29,7 @@ echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
 mysql -h mysql.swedev99.online -uroot -pRoboShop@1 < /app/schema/shipping.sql
 
 echo -e "\e[36m>>>>>>>>> Setup SystemD Service <<<<<<<<\e[0m"
-cp /root/roboshop-shell/shipping.service /etc/systemd/system/shipping.service
+cp$script_path/shipping.service /etc/systemd/system/shipping.service
 
 echo -e "\e[36m>>>>>>>>> Start Shipping Service <<<<<<<<\e[0m"
 systemctl daemon-reload

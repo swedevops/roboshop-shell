@@ -1,6 +1,6 @@
 
 
-source /root/roboshop-shell/common.sh
+source$script_path/common.sh
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
 yum install mongodb-org -y
