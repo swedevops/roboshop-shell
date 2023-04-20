@@ -1,3 +1,7 @@
+script=$(realpath "$0")
+#echo script
+script_path=$(dirname "$script")
+
 source$script_path/common.sh
 echo -e "\e[36m>>>>>>>>> Configuring NodeJS repos <<<<<<<<\e[0m"curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
