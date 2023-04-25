@@ -31,7 +31,7 @@ mkdir /app
   systemctl daemon-reload
   systemctl enable catalogue
   systemctl restart catalogue
-}
+
 
 echo -e "\e[36m>>>>>>>>> Copy MongoDB repo <<<<<<<<\e[0m"
 cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
