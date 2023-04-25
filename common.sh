@@ -1,32 +1,34 @@
 app_user=roboshop
-
+print_head(){
+  echo -e "\e[35m>>>>>> $1 <<<<<\e[0m"
+}
 fun_nodejs(){
-  echo -e "\e[36m>>>>>>>>> Configuring NodeJS repos <<<<<<<<\e[0m"
+  print_head " Configuring NodeJS repos "
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
-  echo -e "\e[36m>>>>>>>>> Install NodeJS <<<<<<<<\e[0m"
+  print_head " Install NodeJS "
   yum install nodejs -y
 
-  echo -e "\e[36m>>>>>>>>> Add Application User <<<<<<<<\e[0m"
+  print_head " Add Application User "
   useradd ${app_user}
 
-  echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
+  print_head " Create Application Directory "
   rm -rf /app
   mkdir /app
 
-  echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
+  print_head " Download App Content "
   curl -o /tmp/${function}.zip https://roboshop-artifacts.s3.amazonaws.com/${function}.zip
   cd /app
 
-  echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
+  print_head " Unzip App Content "
   unzip /tmp/${function}.zip
 
-  echo -e "\e[36m>>>>>>>>> Install NodeJS Dependencies <<<<<<<<\e[0m"
+  print_head " Install NodeJS Dependencies "
   npm install
-  echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
+  print_head " Create Application Directory "
   cp ${script_path}/${function}.service /etc/systemd/system/${function}.service
 
-  echo -e "\e[36m>>>>>>>>> Start ${function} Service <<<<<<<<\e[0m"
+  print_head " Start ${function} Service "
   systemctl daemon-reload
   systemctl enable ${function}
   systemctl restart ${function}
