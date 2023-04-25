@@ -2,7 +2,7 @@ script=$(realpath "$0")
 #echo script
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
-mysql_root_user = $1
+mysql_root_user=$1
 echo -e "\e[36m>>>>>>>>> Install Maven <<<<<<<<\e[0m"
 yum install maven -y
 
