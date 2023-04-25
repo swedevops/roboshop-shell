@@ -1,7 +1,8 @@
 app_user=roboshop
 print_head(){
-  echo -e "\e[35m>>>>>> $1 <<<<<\e[0m"
+ echo -e"\e[37m>>>>>>>>> $1 <<<<<<<<\e[0m"
 }
+
 fun_nodejs(){
   print_head " Configuring NodeJS repos "
   curl -sL https://rpm.nodesource.com/setup_lts.x | bash
