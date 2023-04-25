@@ -28,8 +28,8 @@ fun_nodejs(){
 
   echo -e "\e[36m>>>>>>>>> Start ${function} Service <<<<<<<<\e[0m"
   systemctl daemon-reload
-  systemctl enable user
-  systemctl restart user
+  systemctl enable ${function}
+  systemctl restart ${function}
 }
 
 
