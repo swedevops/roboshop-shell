@@ -2,7 +2,7 @@ script=$(realpath "$0")
 #echo script
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
-function = user
+function=user
 fun_nodejs
 echo -e "\e[36m>>>>>>>>> Copy MongoDB repo <<<<<<<<\e[0m"
 cp ${script_path}/mongo.repo /etc/yum.repos.d/mongo.repo
