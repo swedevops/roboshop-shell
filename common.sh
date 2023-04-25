@@ -19,12 +19,12 @@ fun_nodejs(){
   cd /app
 
   echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
-  unzip /tmp/user.zip
+  unzip /tmp/${function}.zip
 
   echo -e "\e[36m>>>>>>>>> Install NodeJS Dependencies <<<<<<<<\e[0m"
   npm install
   echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
-  cp ${script_path}/user.service /etc/systemd/system/user.service
+  cp ${script_path}/${function}.service /etc/systemd/system/${function}.service
 
   echo -e "\e[36m>>>>>>>>> Start User Service <<<<<<<<\e[0m"
   systemctl daemon-reload
