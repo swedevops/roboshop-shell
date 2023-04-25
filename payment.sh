@@ -16,7 +16,7 @@ mkdir /app
 echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
 curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip
 
-echo -e "\e[36m>>>>>>>>> Extract App Content <<<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>>> Extract App Content <<<<<<<\e[0m"
 cd /app
 unzip /tmp/payment.zip
 
