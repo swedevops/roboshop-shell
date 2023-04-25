@@ -1,6 +1,6 @@
 app_user=roboshop
 print_head(){
- echo -e"\e[32m>>>>>>>>> $1 <<<<<<<<\e[0m"
+ echo -e"\e[33m>>>>>>>>> $1 <<<<<<<<\e[0m"
 }
 
 fun_nodejs(){
