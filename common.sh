@@ -15,7 +15,7 @@ fun_nodejs(){
   mkdir /app
 
   echo -e "\e[36m>>>>>>>>> Download App Content <<<<<<<<\e[0m"
-  curl -o /tmp/${function}.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
+  curl -o /tmp/${function}.zip https://roboshop-artifacts.s3.amazonaws.com/${function}.zip
   cd /app
 
   echo -e "\e[36m>>>>>>>>> Unzip App Content <<<<<<<<\e[0m"
@@ -26,7 +26,7 @@ fun_nodejs(){
   echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
   cp ${script_path}/${function}.service /etc/systemd/system/${function}.service
 
-  echo -e "\e[36m>>>>>>>>> Start User Service <<<<<<<<\e[0m"
+  echo -e "\e[36m>>>>>>>>> Start ${function} Service <<<<<<<<\e[0m"
   systemctl daemon-reload
   systemctl enable user
   systemctl restart user
