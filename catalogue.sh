@@ -27,7 +27,7 @@ mkdir /app
   echo -e "\e[36m>>>>>>>>> Create Application Directory <<<<<<<<\e[0m"
   cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
 
-  print_head " Start catalogue Service "
+ echo -e "\e[36m>>>>>>>>> Start catalogue Service <<<<<<<<\e[0m"
   systemctl daemon-reload
   systemctl enable catalogue
   systemctl restart catalogue
