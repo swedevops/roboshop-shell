@@ -3,7 +3,12 @@ script=$(realpath "$0")
 script_path=$(dirname "$script")
 source ${script_path}/common.sh
 rabbitmq_passwd=$1
-echo -e "\e[36m>>>>>>>>> Setup ErLang Repos <<<<<<<<\e[0m"
+if[ -z "rabbitmq_passwd"]
+then
+  echo password is missing
+  exit
+  fi
+ echo -e "\e[36m>>>>>>>>> Setup ErLang Repos <<<<<<<<\e[0m"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash
 
 echo -e "\e[36m>>>>>>>>> Setup RabbitMQ Repos <<<<<<<<\e[0m"
