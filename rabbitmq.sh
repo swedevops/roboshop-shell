@@ -6,7 +6,7 @@ rabbitmq_passwd=$1
 
 if [ -z "$rabbitmq_passwd" ]
 then
-  echo pitchi nayala input ledhu raa
+  echo input missing
   exit
   fi
  echo -e "\e[36m>>>>>>>>> Setup ErLang Repos <<<<<<<<\e[0m"
