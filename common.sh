@@ -86,7 +86,7 @@ func_pre-requisites()
 {
   func_print_head "Create App User"
   id ${app_user}  &>>/tmp/roboshop.log
-  if [ $? -ne 0]; then
+  if [ $? -ne 0 ]; then
      useradd ${app_user} &>/tmp/roboshop.log &>>$log_file
 fi
 
