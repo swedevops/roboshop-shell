@@ -80,6 +80,8 @@ func_pre-requisites()
 
 func_python()
 {
+  echo -e "\e[36m>>>>>>>>> Install Python <<<<<<<<\e[0m"
+  yum install python36 gcc python3-devel -y
   func_pre-requisites
 
   echo -e "\e[36m>>>>>>>>> Install Dependencies <<<<<<<<\e[0m"

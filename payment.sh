@@ -7,7 +7,7 @@ if [ -z "$rabbitmq_passwd" ]
 then
   echo rabbitmq_passwd password missing
   exit
-  fi
+fi
 func_python
 
 
