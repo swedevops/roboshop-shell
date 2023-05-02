@@ -41,7 +41,7 @@ func_schema_setup(){
 func_pre-requisites()
 {
   func_print_head "Create App User"
-     useradd ${app_user}
+     useradd ${app_user} &>/tmp/roboshop.log
      
      func_print_head "Create App Directory"
      rm -rf /app
