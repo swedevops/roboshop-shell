@@ -1,5 +1,5 @@
 app_user=roboshop
-func_func_print_head(){
+func_print_head(){
  echo -e "\e[36m>>>>>>>>> $1 <<<<<<<<\e[0m"
 }
 func_nodejs(){
