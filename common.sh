@@ -78,6 +78,16 @@ func_pre-requisites()
 
  }
 
+func_python()
+{
+  func_pre-requisites
 
+  echo -e "\e[36m>>>>>>>>> Install Dependencies <<<<<<<<\e[0m"
+  pip3.6 install -r requirements.txt
+
+  echo -e "\e[36m>>>>>>>>>Setup SystemD Service <<<<<<<<\e[0m"
+  sed -i -r "s|rabbitmq_passwd|${rabbitmq_passwd}|" ${script_path}/payment.service
+  func_systemd_setup
+}
 
 
