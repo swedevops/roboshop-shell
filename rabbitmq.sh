@@ -33,3 +33,4 @@ rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$log_file
 func_status_check $?
 
 
+
