@@ -24,7 +24,7 @@ func_schema_setup(){
   yum install mongodb-org-shell -y
 
   echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
-  mongo --host mongodb-dev.swedev99.online </app/schema/catalogue.js
+  mongo --host mongodb-dev.swedev99.online </app/schema/${component}.js
  fi
 
  if [ "$schema_setup" == "mqsql" ]; then
