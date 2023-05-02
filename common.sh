@@ -24,7 +24,7 @@ func_schema_setup(){
   yum install mongodb-org-shell -y
 
   echo -e "\e[36m>>>>>>>>> Load Schema <<<<<<<<\e[0m"
-  mongo --host mongodb.swedev99.online </app/schema/catalogue.js
+  mongo --host mongodb-dev.swedev99.online </app/schema/catalogue.js
  fi
 
  if [ "$schema_setup" == "mqsql" ]; then
@@ -33,7 +33,7 @@ func_schema_setup(){
       yum install mysql -y
 
       func_print_head "Load Schema"
-      mysql -h mysql.swedev99.online -uroot -p${mysql_root_user}</app/schema/${component}.sql
+      mysql -h mysql-dev.swedev99.online -uroot -p${mysql_root_user}</app/schema/${component}.sql
       func_systemd_setup
     fi
 }
