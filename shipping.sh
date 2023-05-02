@@ -9,5 +9,5 @@ then
   exit
   fi
 component=shipping
-func_schema_setup=mysql
+schema_setup=mysql
 func_java
