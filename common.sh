@@ -35,7 +35,9 @@ func_schema_setup(){
       func_print_head "Load Schema"
       mysql -h mysql.swedev99.online -uroot -p${mysql_root_user}</app/schema/${component}.sql
       func_systemd_setup
+    fi
 }
+
 func_pre-requisites()
 {
   func_print_head "Create App User"
