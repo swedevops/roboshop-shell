@@ -27,7 +27,7 @@ func_schema_setup(){
   mongo --host mongodb-dev.swedev99.online </app/schema/${component}.js
  fi
 
- if [ "$schema_setup" == "mqsql" ]; then
+ if [ "$schema_setup" == "mysql" ]; then
 
       func_print_head "Install MySQL"
       yum install mysql -y
